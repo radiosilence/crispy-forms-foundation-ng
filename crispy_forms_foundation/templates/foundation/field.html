@@ -26,7 +26,7 @@
                 ng-repeat="error in {{ scope_prefix }}.errors['{{ field.name }}']"
                 id="error_{{ forloop.counter }}_{{ field.auto_id }}"
                 class="errorField error">
-                {< error >}
+                {% verbatim %}{{ error }}{% endverbatim %}
             </small>
         {% endif %}
 
